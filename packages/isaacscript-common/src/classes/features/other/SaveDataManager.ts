@@ -150,7 +150,12 @@ export class SaveDataManager extends Feature {
   private preGameExit = (): void => {
     // We unconditionally save variables to disk (because regardless of a save & quit or a death,
     // persistent variables should be recorded).
-    saveToDisk(this.mod, this.saveDataMap, this.saveDataConditionalFuncMap);
+    saveToDisk(
+      this.mod,
+      this.saveDataMap,
+      this.saveDataDefaultsMap,
+      this.saveDataConditionalFuncMap,
+    );
 
     restoreDefaultsForAllFeaturesAndKeys(
       this.saveDataMap,
@@ -170,7 +175,12 @@ export class SaveDataManager extends Feature {
     // We save data to disk at the beginning of every floor (for the 2nd floor and beyond) to
     // emulate what the game does internally. (This mitigates data loss in the event of a crash).
     if (!onFirstFloor()) {
-      saveToDisk(this.mod, this.saveDataMap, this.saveDataConditionalFuncMap);
+      saveToDisk(
+        this.mod,
+        this.saveDataMap,
+        this.saveDataDefaultsMap,
+        this.saveDataConditionalFuncMap,
+      );
     }
   };
 
@@ -400,7 +410,12 @@ export class SaveDataManager extends Feature {
    */
   @Exported
   public saveDataManagerSave(): void {
-    saveToDisk(this.mod, this.saveDataMap, this.saveDataConditionalFuncMap);
+    saveToDisk(
+      this.mod,
+      this.saveDataMap,
+      this.saveDataDefaultsMap,
+      this.saveDataConditionalFuncMap,
+    );
   }
 
   /**

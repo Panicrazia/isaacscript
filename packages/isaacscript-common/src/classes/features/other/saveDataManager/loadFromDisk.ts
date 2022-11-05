@@ -94,6 +94,6 @@ function readSaveDatFile(mod: Mod) {
   return jsonStringTrimmed;
 }
 
-function tryLoadModData(this: void, mod: Mod) {
+function tryLoadModData(this: void, mod: Mod): string {
   return mod.LoadData();
 }
