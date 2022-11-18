@@ -1,12 +1,11 @@
 import { StageID } from "isaac-typescript-definitions";
+import { HasAllEnumKeys } from "../types/HasAllEnumKeys";
 
 /** We arbitrarily specify a default color equal to that of Basement. */
 const DEFAULT_COLOR = Color(201 / 255, 114 / 255, 96 / 255);
 
 /** These values are taken from StageAPI. */
-export const VERSUS_SCREEN_DIRT_SPOT_COLORS: {
-  readonly [key in StageID]: Color;
-} = {
+export const VERSUS_SCREEN_DIRT_SPOT_COLORS = {
   [StageID.SPECIAL_ROOMS]: DEFAULT_COLOR, // 0
   [StageID.BASEMENT]: Color(201 / 255, 114 / 255, 96 / 255), // 1
   [StageID.CELLAR]: Color(229 / 255, 157 / 255, 111 / 255), // 2
@@ -36,4 +35,4 @@ export const VERSUS_SCREEN_DIRT_SPOT_COLORS: {
   [StageID.MORTIS]: Color(124 / 255, 134 / 255, 111 / 255), // 34
   [StageID.HOME]: DEFAULT_COLOR, // 35
   [StageID.BACKWARDS]: DEFAULT_COLOR, // 36
-} as const;
+} as const satisfies HasAllEnumKeys<StageID>;

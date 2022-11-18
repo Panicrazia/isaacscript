@@ -93,6 +93,13 @@ export function mapSetHash<V>(
   map.set(hash, value);
 }
 
+/** Helper function to initialize a new read-only `Map`. */
+export function newReadonlyMap<K, V>(
+  initializerList?: Array<[K, V]>,
+): ReadonlyMap<K, V> {
+  return new Map(initializerList);
+}
+
 /** Helper function to sum every value in a map together. */
 export function sumMap(
   map: Map<unknown, number> | ReadonlyMap<unknown, number>,

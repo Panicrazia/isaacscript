@@ -136,6 +136,11 @@ export function getSortedSetValues<T>(set: Set<T> | ReadonlySet<T>): T[] {
   return array;
 }
 
+/** Helper function to initialize a new read-only `Set`. */
+export function newReadonlySet<V>(initializerList?: V[]): ReadonlySet<V> {
+  return new Set(initializerList);
+}
+
 /**
  * Helper function to add one or more elements to a set at once without having to repeatedly call
  * the `Set.add` method.

@@ -13,6 +13,11 @@ This page lists the changes to the IsaacScript framework.
 
 - Added the following helper functions:
   - `pressInput`
+  - `newReadonlyMap`
+  - `newReadonlySet`
+  - `newReadonlyVector`
+- Deleted the following helper functions:
+  - `newObjectWithEnumKeys` (use the `satisfies` operator with the `HasAllEnumKeys` helper type)
 
 ## November 6th, 2022
 

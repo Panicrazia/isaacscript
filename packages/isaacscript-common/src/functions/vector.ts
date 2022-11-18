@@ -100,6 +100,11 @@ export function isVector(object: unknown): object is Vector {
   return isIsaacAPIClassOfType(object, OBJECT_NAME);
 }
 
+/** Helper function to initialize a new read-only `Vector`. */
+export function newReadonlyVector(x: float, y: float): Readonly<Vector> {
+  return Vector(x, y);
+}
+
 /**
  * Helper function to convert a `Vector` object to a `SerializedVector` object. (This is used by the
  * save data manager when writing data from the "save#.dat" file.)
