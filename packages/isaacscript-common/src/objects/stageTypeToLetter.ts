@@ -13,4 +13,4 @@ export const STAGE_TYPE_TO_LETTER = {
 
   [StageType.REPENTANCE]: "c", // 4
   [StageType.REPENTANCE_B]: "d", // 5
-} as const satisfies HasAllEnumKeys<StageType>;
+} as const satisfies HasAllEnumKeys<StageType, string>;

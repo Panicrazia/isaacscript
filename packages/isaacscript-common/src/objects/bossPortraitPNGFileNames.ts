@@ -114,4 +114,4 @@ export const BOSS_PORTRAIT_PNG_FILE_NAMES = {
   [BossID.BEAST]: "portrait_dogma.png", // 100
   [BossID.HORNY_BOYS]: "portrait_hornyboys.png", // 101
   [BossID.CLUTCH]: "portrait_clutch.png", // 102
-} as const satisfies HasAllEnumKeys<BossID>;
+} as const satisfies HasAllEnumKeys<BossID, string>;

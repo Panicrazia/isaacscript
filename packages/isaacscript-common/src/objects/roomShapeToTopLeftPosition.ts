@@ -1,7 +1,6 @@
 import { RoomShape } from "isaac-typescript-definitions";
 import { VectorZero } from "../core/constants";
 import { newReadonlyVector } from "../functions/vector";
-import { HasAllEnumKeys } from "../types/HasAllEnumKeys";
 
 const NARROW_HORIZONTAL_TOP_LEFT_POSITION = newReadonlyVector(0, 2);
 const NARROW_VERTICAL_TOP_LEFT_POSITION = newReadonlyVector(4, 0);
@@ -10,7 +9,9 @@ const NARROW_VERTICAL_TOP_LEFT_POSITION = newReadonlyVector(4, 0);
  * "Vector(0, 0)" corresponds to the top left tile of a room, not including the walls. (The top-left
  * wall would be at "Vector(-1, -1)".)
  */
-export const ROOM_SHAPE_TO_TOP_LEFT_POSITION = {
+export const ROOM_SHAPE_TO_TOP_LEFT_POSITION: {
+  [key in RoomShape]: Readonly<Vector>;
+} = {
   [RoomShape.SHAPE_1x1]: VectorZero, // 1
   [RoomShape.IH]: NARROW_HORIZONTAL_TOP_LEFT_POSITION, // 2
   [RoomShape.IV]: NARROW_VERTICAL_TOP_LEFT_POSITION, // 3
@@ -23,4 +24,4 @@ export const ROOM_SHAPE_TO_TOP_LEFT_POSITION = {
   [RoomShape.LTR]: VectorZero, // 10
   [RoomShape.LBL]: VectorZero, // 11
   [RoomShape.LBR]: VectorZero, // 12
-} as const satisfies HasAllEnumKeys<RoomShape>;
+} as const;

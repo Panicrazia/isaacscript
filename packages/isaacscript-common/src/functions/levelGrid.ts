@@ -323,7 +323,7 @@ export function getRoomShapeAdjacentExistingGridIndexes(
  */
 export function getRoomShapeAdjacentGridIndexDeltas(
   roomShape: RoomShape,
-): Map<DoorSlot, int> {
+): ReadonlyMap<DoorSlot, int> {
   return ROOM_SHAPE_TO_DOOR_SLOTS_TO_GRID_INDEX_DELTA[roomShape];
 }
 

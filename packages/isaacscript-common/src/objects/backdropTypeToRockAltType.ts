@@ -64,4 +64,4 @@ export const BACKDROP_TYPE_TO_ROCK_ALT_TYPE = {
   [BackdropType.MINES_SHAFT]: RockAltType.MUSHROOM, // 58
   [BackdropType.ASHPIT_SHAFT]: RockAltType.MUSHROOM, // 59
   [BackdropType.DARK_CLOSET]: RockAltType.SKULL, // 60
-} as const satisfies HasAllEnumKeys<BackdropType>;
+} as const satisfies HasAllEnumKeys<BackdropType, RockAltType>;

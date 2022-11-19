@@ -8,4 +8,4 @@ export const STAGE_TYPE_SUFFIXES = {
   [StageType.GREED_MODE]: "", // 3
   [StageType.REPENTANCE]: "c", // 4
   [StageType.REPENTANCE_B]: "d", // 5
-} as const satisfies HasAllEnumKeys<StageType>;
+} as const satisfies HasAllEnumKeys<StageType, string>;

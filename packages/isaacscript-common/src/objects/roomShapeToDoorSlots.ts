@@ -12,9 +12,7 @@ const ALL_DOOR_SLOTS_SET: ReadonlySet<DoorSlot> = new Set([
   DoorSlot.DOWN_1, // 7
 ]);
 
-export const ROOM_SHAPE_TO_DOOR_SLOTS: {
-  readonly [key in RoomShape]: ReadonlySet<DoorSlot>;
-} = {
+export const ROOM_SHAPE_TO_DOOR_SLOTS = {
   // 1
   [RoomShape.SHAPE_1x1]: new Set([
     DoorSlot.LEFT_0, // 0
@@ -81,4 +79,4 @@ export const ROOM_SHAPE_TO_DOOR_SLOTS: {
 
   // 12
   [RoomShape.LBR]: ALL_DOOR_SLOTS_SET,
-} as const satisfies HasAllEnumKeys<RoomShape>;
+} as const satisfies HasAllEnumKeys<RoomShape, ReadonlySet<DoorSlot>>;

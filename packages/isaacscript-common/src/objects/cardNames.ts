@@ -103,4 +103,4 @@ export const CARD_NAMES = {
   [CardType.SOUL_FORGOTTEN]: "Soul of the Forgotten",
   [CardType.SOUL_BETHANY]: "Soul of Bethany",
   [CardType.SOUL_JACOB]: "Soul of Jacob and Esau",
-} as const satisfies HasAllEnumKeys<CardType>;
+} as const satisfies HasAllEnumKeys<CardType, string>;

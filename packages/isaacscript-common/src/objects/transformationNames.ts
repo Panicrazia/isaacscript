@@ -16,4 +16,4 @@ export const TRANSFORMATION_NAMES = {
   [PlayerForm.ADULT]: "Adult", // 11
   [PlayerForm.SPIDER_BABY]: "Spider Baby", // 12
   [PlayerForm.STOMPY]: "Stompy", // 13
-} as const satisfies HasAllEnumKeys<PlayerForm>;
+} as const satisfies HasAllEnumKeys<PlayerForm, string>;

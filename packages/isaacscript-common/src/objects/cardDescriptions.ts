@@ -103,4 +103,4 @@ export const CARD_DESCRIPTIONS = {
   [CardType.SOUL_FORGOTTEN]: "Skeletal protector", // 95
   [CardType.SOUL_BETHANY]: "Friends from beyond", // 96
   [CardType.SOUL_JACOB]: "Bound by blood", // 97
-} as const satisfies HasAllEnumKeys<CardType>;
+} as const satisfies HasAllEnumKeys<CardType, string>;

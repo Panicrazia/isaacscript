@@ -31,4 +31,4 @@ export const ROOM_TYPE_GOTO_PREFIXES = {
   [RoomType.SECRET_EXIT]: "s.secretexit", // 27
   [RoomType.BLUE]: "s.blue", // 28
   [RoomType.ULTRA_SECRET]: "s.ultrasecret", // 29
-} as const satisfies HasAllEnumKeys<RoomType>;
+} as const satisfies HasAllEnumKeys<RoomType, string>;

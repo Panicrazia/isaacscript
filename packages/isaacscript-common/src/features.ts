@@ -55,10 +55,10 @@ import { TaintedLazarusPlayers } from "./classes/features/other/TaintedLazarusPl
 import { ISCFeature } from "./enums/ISCFeature";
 import { ModCallbackCustom } from "./enums/ModCallbackCustom";
 import {
-  newObjectWithEnumKeys,
   validateInterfaceMatchesEnum,
 } from "./functions/utils";
 import { ModUpgradedInterface } from "./interfaces/private/ModUpgradedInterface";
+import { HasAllEnumKeys } from "./types/HasAllEnumKeys";
 
 export interface ISCFeatureToClass {
   // Callback logic
@@ -164,7 +164,7 @@ export function getFeatures(
     stageHistory,
   );
 
-  return newObjectWithEnumKeys(ISCFeature, {
+  return {
     // Callback logic
     [ISCFeature.CUSTOM_REVIVE]: new CustomRevive(
       callbacks[ModCallbackCustom.PRE_CUSTOM_REVIVE],
@@ -284,5 +284,5 @@ export function getFeatures(
     [ISCFeature.STAGE_HISTORY]: stageHistory,
     [ISCFeature.START_AMBUSH]: new StartAmbush(runInNFrames),
     [ISCFeature.TAINTED_LAZARUS_PLAYERS]: new TaintedLazarusPlayers(),
-  } as const);
+  } as const satisfies HasAllEnumKeys<ISCFeature, unknown>;
 }

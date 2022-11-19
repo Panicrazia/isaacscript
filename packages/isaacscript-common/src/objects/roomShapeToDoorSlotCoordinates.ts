@@ -1,5 +1,4 @@
 import { DoorSlot, RoomShape } from "isaac-typescript-definitions";
-import { HasAllEnumKeys } from "../types/HasAllEnumKeys";
 
 /**
  * The coordinates correspond to the x and y values that are present in a room's XML file.
@@ -120,4 +119,4 @@ export const ROOM_SHAPE_TO_DOOR_SLOT_COORDINATES: {
     [DoorSlot.RIGHT_1, [13, 10]], // 6
     [DoorSlot.DOWN_1, [19, 7]], // 7
   ]),
-} as const satisfies HasAllEnumKeys<RoomShape>;
+} as const;
