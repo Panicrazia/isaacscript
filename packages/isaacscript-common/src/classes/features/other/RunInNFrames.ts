@@ -19,6 +19,7 @@ type IntervalFunctionTuple = [
   numIntervalFrames: int,
 ];
 
+/** @internal */
 export class RunInNFrames extends Feature {
   /** @internal */
   public override v = {
