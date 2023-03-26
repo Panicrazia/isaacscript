@@ -288,6 +288,6 @@ Each custom stage needs a unique room variant prefix. And all of the room varian
 
 | Room Variant Prefix | Mod Name |
 | ------------------- | -------- |
-| n/a                 | n/a      |
+| 777                 | Seven Deadly Sins Lust      |
 
 (There are no mods yet that have claimed any prefixes. Click on the edit button below to add yours.)
